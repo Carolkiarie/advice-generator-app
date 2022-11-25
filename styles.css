@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+
+  /* css styles variables*/
+  :root{
+    --grayishblue: hsl(217, 19%, 24%);
+    --darkgrayishblue: hsl(217, 100%, 66%);
+    --darkblue: hsl(218, 23%, 16%);
+    --lightcyan: hsl(193, 38%, 86%);
+    --neongreen: hsl(150, 100%, 66%);
+  }
+
+
+body{
+    font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-size: 28px;
+    margin: 0;
+    background-color: var(--darkblue);
+    display: flex;
+   align-items: center; 
+   flex-direction: column;
+   position: relative;
+    
+}
+
+.icon{
+    background-color: var(--neongreen);
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 28.5rem;
+    left: auto;
+    border-radius: 50%;
+    
+}
+.imageicon{
+     padding: 0.6em; 
+    
+}
+:hover.icon{
+    cursor: pointer;
+    box-shadow: 1px 1px 20px var(--neongreen);
+}
+.advise{
+    color: var(--neongreen);
+    font-size: 20px;
+}
+.advisegenerated{
+    color: var(--lightcyan);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1.6em 0.8em;
+    background-color:var(--grayishblue);
+    text-align: center;
+    border: 1px solid var(--darkblue);
+    position: relative;
+   max-width: 600px; 
+   height: 290px;
+   margin: 4em 1em;
+   border-radius: 13px;
+  justify-content: space-around;
+   
+
+    
+}
+
+.mobiledisplay{
+    margin-bottom: 5px;
+}
+
