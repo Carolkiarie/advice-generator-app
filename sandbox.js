@@ -27,4 +27,26 @@ icon.addEventListener('click',()=>{
     )); 
     
 })
+// store data il local storage
 
+
+ // store data in local storage
+ window.onload= ()=>{
+    getAdvice().then((response)=>{
+        const useradvice= response.slip.advice;
+        const userid= response.slip.id;
+    
+         localStorage.setItem('lastAdviceId', userid);
+        localStorage.setItem('lastAdviceText', useradvice);
+
+        const advice= document.querySelector('.advise');
+        const generateAdvice= document.querySelector('.advisegenerated')
+
+        if (localStorage.getItem('lastAdviceId')) {
+            generateAdvice.innerText= `"${localStorage.getItem('lastAdviceText')}"`
+            advice.querySelector('span').innerText= `#${localStorage.getItem('lastAdviceId')}`;
+          }
+     }).catch((err)=>{
+        console.log(err)
+     })
+ }
